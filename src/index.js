@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Doctors_per10000 from './components/Doctors_per10000.js'
+import Nurses_per1000 from './components/Nurse_per1000.js';
+import WorkingHours from './components/WorkingHours.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Doctors_per10000 />
+    <Nurses_per1000 />
+    <WorkingHours />
   </React.StrictMode>
 );
 
