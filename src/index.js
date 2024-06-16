@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import Doctors_per10000 from './components/Doctors_per10000.js'
 import Nurses_per1000 from './components/Nurse_per1000.js';
 import WorkingHours from './components/WorkingHours.js';
+import Taiwan_doctor_per10000 from './components/Taiwan_doctor_per10000'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <Doctors_per10000 />
     <Nurses_per1000 />
     <WorkingHours />
+    <Taiwan_doctor_per10000 />
   </React.StrictMode>
 );
 

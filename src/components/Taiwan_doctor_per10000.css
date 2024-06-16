@@ -1,0 +1,20 @@
+.toolbox-button {
+    background-color: #f0f0f0;
+    color: #3f3f3f;
+    border: none;
+    padding: 8px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.toolbox-button:hover {
+    background-color: #e0e0e0;
+}
+
+.button-icon {
+    margin-right: 5px;
+}
