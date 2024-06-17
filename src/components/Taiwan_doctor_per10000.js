@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import ReactECharts from 'echarts-for-react';
+import data from './Taiwan_per1000.json';  // Import the JSON data
 import "./Taiwan_doctor_per10000.css"
 
 const Taiwan_doctor_per10000 = () => {
   const [originalData, setOriginalData] = useState([]);
 
   useEffect(() => {
-    fetch('Taiwan_per1000.json')
-      .then(response => response.json())
-      .then(data => {
-        // Initialize original data and current chart data
-        setOriginalData(data);
-      });
+    // Initialize original data and current chart data
+    setOriginalData(data);
   }, []);
 
   const sortDesc = () => {
@@ -21,13 +18,8 @@ const Taiwan_doctor_per10000 = () => {
   };
 
   const restore = () => {
-    // Restore original data (you should fetch again if you need the original state)
-    // For simplicity, assume fetching original data again
-    fetch('Taiwan_per1000.json')
-      .then(response => response.json())
-      .then(data => {
-        setOriginalData(data);
-      });
+    // Restore original data from the imported data
+    setOriginalData(data);
   };
 
   const getOption = (data) => {
@@ -89,9 +81,9 @@ const Taiwan_doctor_per10000 = () => {
   };
 
   return (
-    <div style={{ width: '1200px', height: '600px', position:'relative'}}>
+    <div style={{ width: '1200px', height: '600px', position: 'relative' }}>
       <ReactECharts option={getOption(originalData)} style={{ width: '1200px', height: '600px' }} />
-      <div style={{ position:"absolute", top:'10px',  right:'10px',zIndex:'1000' }}>
+      <div style={{ position: "absolute", top: '10px', right: '10px', zIndex: '1000' }}>
         <button className="toolbox-button" onClick={sortDesc}>
           <span className="button-icon">&#9650;</span> 排序由大到小
         </button>
